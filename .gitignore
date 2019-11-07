@@ -50,6 +50,8 @@ _deps
 *.i*86
 *.x86_64
 *.hex
+bftoc
+bfinterpreter
 
 # Debug files
 *.dSYM/
