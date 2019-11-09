@@ -1,4 +1,3 @@
-![](logo.png)
 # Brain Fuck Toolbox
 Welcome!
 This is a toolbox for programming and building in Brainfuck.
@@ -90,20 +89,3 @@ and run the executable with
 The bftoc is very robust and passes all test set by [Daniel Cristofani](http://www.hevanet.com/cristofd/brainfuck/tests.b)
 (to a degree; the range tests don't cause segfaults but may make a mess).
 Overall, I think that the bftoc is the superior toolset but is more heavy and difficult.
-
-## Examples
-Two example files have been provided with the toolkit: `example.c` and `example.bf`.
-`example.bf` is a "Hello World!" program written in Brainfuck, with `example.c` being the output from bftoc.
-These are guaranteed to work and output "Hello World!" should everything be built properly.
-
-## Other
-
-### Contributing
-Why?
-This is the stupidest thing.
-Like I made this and find it so stupid.
-Whatever.
-Please use normal open source etiquette.
-
-### License
-This project is licensed with the MIT license.
