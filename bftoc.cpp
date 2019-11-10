@@ -33,7 +33,6 @@ int main(int argc, char *argv[]) {
             of << "#include <stdlib.h>\n";
             of << "\n";
             of << "int main(int argc, char *argv[]) {\n";
-            //of << "setbuf(stdout, NULL);\n";
             of << "char *bfPtr = (char*) calloc (30000, sizeof(char));\n";
             of << "char *freePtr = bfPtr;\n";
             of << "unsigned int cnt = 0;\n";
