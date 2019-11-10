@@ -6,7 +6,6 @@
 
 int main(int argc, char *argv[]) {
     std::string filename;
-    bool comp = false;
 
     for (int i = 0; i < argc; ++i) {
         std::string tmp(argv[i]);
@@ -43,29 +42,28 @@ int main(int argc, char *argv[]) {
             while (inf >> op) {
                 switch (op) {
                     case '>':
-                        of << "if(cnt != 29999){ ++bfPtr; ++cnt;}\n";
+                        of << "/* > */ if(cnt != 29999){ ++bfPtr; ++cnt;}\n";
                         break;
                     case '<':
-                        of << "if(cnt != 0){ --bfPtr; --cnt;}\n";
+                        of << "/* < */ if(cnt != 0){ --bfPtr; --cnt;}\n";
                         break;
                     case '+':
-                        of << "++*bfPtr;\n";
+                        of << "/* + */ ++*bfPtr;\n";
                         break;
                     case '-':
-                        of << "--*bfPtr;\n";
+                        of << "/* - */ --*bfPtr;\n";
                         break;
                     case '[':
-                        of << "while (*bfPtr){\n";
+                        of << "/* [ */ while (*bfPtr != 0){\n";
                         break;
                     case ']':
-                        of << "}\n";
+                        of << "/* ] */ }\n";
                         break;
                     case ',':
-                        of << "*bfPtr = getchar();\n";
+                        of << "/* , */ *bfPtr = getchar();\n";
                         break;
                     case '.':
-                        of << "putchar(*bfPtr);\n";
-                        of << "fflush(stdout);\n";
+                        of << "/* . */ putchar(*bfPtr); fflush(stdout);\n";
                         break;
                     default:
                         std::cerr << "Unexpected operand!" << std::endl << std::flush;
